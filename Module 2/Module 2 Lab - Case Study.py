@@ -27,3 +27,6 @@ while last_name != "ZZZ": # Loop to continue asking for student names and GPAs
     else: # Encouraging print statement for those that didn't make any academic honors
         print(f"{first_name} {last_name} did not make any academic honors. Keep trying!")
     last_name = input('What is your last name?("ZZZ" to quit): ') # Get last name for next student or exit the loop
+
+
+# https://github.com/LeviZm/SDEV220.git
