@@ -1,7 +1,8 @@
 '''
 Module 3 Tutorial - Functional Programming vs OOP
 Levi Melangton
-Object Oriented Programming (OOP) Portion of the Module 3 Tutorial Assignment.
+
+Object Oriented Programming (OOP) portion of the Module 3 Tutorial Assignment.
 This program sorts an Array of 0s, 1s, and 2s in ascending order--without using built-in sorting functions.
 
 Constraits:
@@ -9,8 +10,8 @@ Constraits:
 0 <= arr[i] <= 2
 
 Variables in main:
-arr[]: An array of integers containing only 0s, 1s, and 2s.
-solution: instance of the Solution class to call the sort012 method.
+test_cases: List containing the unsorted arrays of integers to be sorted.
+sol: Instance of the Solution class to call the sort012 method and print the results.
 
 Variables in sort012 method:
 low = 0: Pointer to track the position of the next 0.
@@ -39,10 +40,20 @@ class Solution:
         return arr
 
 def main():
-    arr = [0, 1, 2, 0, 1, 2]
-    print(f"Original array: {arr}")
-    solution = Solution()
-    print(f"Sorted array: {solution.sort012(arr)}")
+    test_cases = [
+        [0, 1, 2, 0, 1, 2],
+        [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
+    ]
+
+    for i, arr in enumerate(test_cases, 1):
+        original = list(arr) # Store the original array for printing
+        print(f"Test Case {i}:")
+        print(f"Original array: {original}")
+
+        # Create an instance of the Solution class to call the sort012 method
+        sol = Solution()
+        sorted_arr = sol.sort012(arr)
+        print(f"Sorted array: {sorted_arr}\n")
 
 if __name__ == "__main__":
     main()
