@@ -11,9 +11,11 @@ def test_sum_list():
     assert sum(data) == 6
 
 def test_list_empty():
+    '''Test that it doesn't fail on an empty list'''
     data = []
     assert sum(data) == 0
 
 def test_list_one_element():
+    '''Test that it can sum a list with one element'''
     data = [42]
     assert sum(data) == 42
